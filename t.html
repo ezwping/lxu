@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="临序空间设计，专注榆林神木私宅整装、别墅设计、商铺办公室工装、旧房翻新改造，原创全案空间设计落地服务。">
+    <!-- 统一标签页图标 -->
+    <link rel="icon" href="social-icon/lxbqlogo.png" type="image/png">
+    <link rel="apple-touch-icon" href="social-icon/lxbqlogo.png">
+    <title>3DMAX其他效果图敬请期待 - 临序空间设计</title>
+    <style>
+        :root{
+            --gold:#c8a469;
+            /* 浅色默认变量 */
+            --bg-page:#ffffff;
+            --bg-card:#f7f7f7;
+            --text-main:#222222;
+            --text-sub:#444444;
+            --border-color:#dddddd;
+        }
+        [data-theme="dark"]{
+            --bg-page:#151515;
+            --bg-card:#1f1f1f;
+            --text-main:#eeeeee;
+            --text-sub:#cccccc;
+            --border-color:#333333;
+        }
+        [data-theme="auto"]{
+            color-scheme: light dark;
+        }
+        @media (prefers-color-scheme: dark) {
+            html[data-theme="auto"]{
+                --bg-page:#151515;
+                --bg-card:#1f1f1f;
+                --text-main:#eeeeee;
+                --text-sub:#cccccc;
+                --border-color:#333333;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            transition: background-color 0.35s ease, color 0.35s ease;
+        }
+        body{
+            background-color: var(--bg-page);
+        }
+        /* 导航栏 */
+        header {
+            background-color: #181818;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .nav-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 72px;
+            gap: 20px;
+        }
+        /* LOGO图片样式 */
+        .logo img {
+            height: 52px;
+            width: auto;
+            display: block;
+        }
+        .nav-right-wrap {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .main-nav a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.25s;
+        }
+        .main-nav a:hover {
+            color: var(--gold);
+        }
+
+        /* ==========主题下拉弹窗（和首页完全一致｜竖向排列）========== */
+        .theme-dropdown{
+            position: relative;
+        }
+        .theme-trigger{
+            width:36px;
+            height:36px;
+            border-radius:50%;
+            border:1px solid #666;
+            background:transparent;
+            color:#ccc;
+            font-size:16px;
+            cursor:pointer;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:0.3s;
+        }
+        .theme-trigger:hover{
+            border-color:var(--gold);
+            color:var(--gold);
+        }
+        .theme-menu{
+            position:absolute;
+            top:46px;
+            right:0;
+            background:#222;
+            border-radius:6px;
+            padding:8px;
+            display:none;
+            flex-direction: column;
+            gap:6px;
+            z-index:9999;
+            box-shadow:0 6px 14px rgba(0,0,0,0.35);
+        }
+        .theme-menu.open{
+            display:flex;
+        }
+        .theme-option{
+            width:34px;
+            height:34px;
+            border-radius:50%;
+            border:1px solid #444;
+            background:transparent;
+            color:#ccc;
+            font-size:16px;
+            cursor:pointer;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:0.25s;
+        }
+        .theme-option.active{
+            border-color:var(--gold);
+            color:var(--gold);
+        }
+        .theme-option:hover{
+            border-color:var(--gold);
+            color:var(--gold);
+        }
+
+        /* 容器通用 */
+        .wrap {
+            max-width: 1240px;
+            margin: 70px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .section-title h2 {
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--gold);
+            font-size: 26px;
+            color: var(--text-main);
+        }
+        /* 内容区域 */
+        .about-content {
+            line-height: 1.85;
+            color: var(--text-sub);
+            font-size: 16px;
+            text-align:center;
+        }
+        /* 底部 */
+        footer {
+            background: #181818;
+            color: #aaa;
+            text-align: center;
+            padding: 35px 0;
+            margin-top: 60px;
+        }
+
+        /* 移动端自适应【重点】 */
+        @media (max-width:640px){
+            .nav-container{height:auto;padding:15px 20px;flex-direction:column;gap:15px;}
+            .nav-right-wrap{flex-wrap: wrap;justify-content:center;gap:16px;}
+            .main-nav{flex-wrap:wrap;justify-content:center;gap:16px;}
+            .main-nav a{font-size:14px;}
+            .wrap {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+<!-- 顶部导航 -->
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="social-icon/lxlogo.png" alt="临序空间设计 | Linxu Space Design">
+        </div>
+        <div class="nav-right-wrap">
+            <nav class="main-nav">
+                <a href="index.html">首页</a>
+                <a href="service.html">业务服务</a>
+                <a href="about.html">关于我们</a>
+                <a href="index.html#contact">联系我们</a>
+            </nav>
+
+            <!-- 主题切换组件，和首页完全同步 -->
+            <div class="theme-dropdown">
+                <button class="theme-trigger" id="triggerBtn"></button>
+                <div class="theme-menu" id="themeMenu">
+                    <button class="theme-option" data-mode="auto">🔄</button>
+                    <button class="theme-option" data-mode="light">☀️</button>
+                    <button class="theme-option" data-mode="dark">🌙</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="section-title">
+        <h2>3DMAX其他效果图敬请期待</h2>
+    </div>
+    <div class="about-content">
+        <p>临序空间设计：3DMAX其他效果图敬请期待</p>
+        <br>
+        <p>设计落地：让结尾配得上开头</p>
+    </div>
+</div>
+
+<footer>
+    <p>临序空间设计 © 2026 版权所有</p>
+</footer>
+</div>
+
+<script>
+    const html = document.documentElement;
+    const triggerBtn = document.getElementById('triggerBtn');
+    const themeMenu = document.getElementById('themeMenu');
+    const options = document.querySelectorAll('.theme-option');
+    const storageKey = "site-theme";
+    const iconMap = {
+        auto:"🔄",
+        light:"☀️",
+        dark:"🌙"
+    };
+
+    // 读取缓存初始化（和首页共用本地存储，多页面同步）
+    let currentMode = localStorage.getItem(storageKey) || "auto";
+    applyMode(currentMode);
+
+    function applyMode(mode){
+        currentMode = mode;
+        html.setAttribute('data-theme', mode);
+        triggerBtn.textContent = iconMap[mode];
+        options.forEach(opt=>{
+            opt.classList.toggle('active', opt.dataset.mode === mode);
+        })
+        localStorage.setItem(storageKey, mode);
+    }
+
+    triggerBtn.addEventListener('click',(e)=>{
+        e.stopPropagation();
+        themeMenu.classList.toggle('open');
+    })
+
+    options.forEach(opt=>{
+        opt.addEventListener('click',()=>{
+            applyMode(opt.dataset.mode);
+            themeMenu.classList.remove('open');
+        })
+    })
+
+    document.addEventListener('click',()=>{
+        themeMenu.classList.remove('open');
+    })
+</script>
+</body>
+</html>

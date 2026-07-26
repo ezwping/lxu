@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="临序空间设计，私宅整装、别墅设计、商铺办公室工装、旧房翻新一站式全案设计落地服务。">
+    <!-- 标签页图标，和首页路径完全统一 -->
+    <link rel="icon" href="social-icon/lxbqlogo.png" type="image/png">
+    <link rel="apple-touch-icon" href="social-icon/lxbqlogo.png">
+    <title>业务服务 - 临序空间设计</title>
+    <style>
+        :root{
+            --gold:#c8a469;
+            --bg-page:#ffffff;
+            --bg-card:#f7f7f7;
+            --text-main:#222222;
+            --text-sub:#444444;
+            --border-color:#dddddd;
+        }
+        [data-theme="dark"]{
+            --bg-page:#151515;
+            --bg-card:#1f1f1f;
+            --text-main:#eeeeee;
+            --text-sub:#cccccc;
+            --border-color:#333333;
+        }
+        [data-theme="auto"]{
+            color-scheme: light dark;
+        }
+        @media (prefers-color-scheme: dark) {
+            html[data-theme="auto"]{
+                --bg-page:#151515;
+                --bg-card:#1f1f1f;
+                --text-main:#eeeeee;
+                --text-sub:#cccccc;
+                --border-color:#333333;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            transition: background-color 0.35s ease, color 0.35s ease;
+        }
+        body{
+            background-color: var(--bg-page);
+        }
+        header {
+            background-color: #181818;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .nav-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 72px;
+            gap: 20px;
+        }
+        .logo img {
+            height: 52px;
+            width: auto;
+            display: block;
+        }
+        .nav-right-wrap {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .main-nav a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.25s;
+        }
+        .main-nav a:hover {
+            color: var(--gold);
+        }
+        /* 当前页面导航高亮 */
+        .main-nav a.active{
+            color: var(--gold);
+        }
+        .theme-dropdown{
+            position: relative;
+        }
+        .theme-trigger{
+            width:36px;
+            height:36px;
+            border-radius:50%;
+            border:1px solid #666;
+            background:transparent;
+            color:#ccc;
+            font-size:16px;
+            cursor:pointer;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:0.3s;
+        }
+        .theme-trigger:hover{
+            border-color:var(--gold);
+            color:var(--gold);
+        }
+        .theme-menu{
+            position:absolute;
+            top:46px;
+            right:0;
+            background:#222;
+            border-radius:6px;
+            padding:8px;
+            display:none;
+            flex-direction: column;
+            gap:6px;
+            z-index:9999;
+            box-shadow:0 6px 14px rgba(0,0,0,0.35);
+        }
+        .theme-menu.open{
+            display:flex;
+        }
+        .theme-option{
+            width:34px;
+            height:34px;
+            border-radius:50%;
+            border:1px solid #444;
+            background:transparent;
+            color:#ccc;
+            font-size:16px;
+            cursor:pointer;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition:0.25s;
+        }
+        .theme-option.active{
+            border-color:var(--gold);
+            color:var(--gold);
+        }
+        .theme-option:hover{
+            border-color:var(--gold);
+            color:var(--gold);
+        }
+        .wrap {
+            max-width: 1240px;
+            margin: 70px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+            margin-top:80px;
+        }
+        .section-title h2 {
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--gold);
+            font-size: 26px;
+            color: var(--text-main);
+        }
+        .service-content {
+            line-height: 1.85;
+            color: var(--text-sub);
+            font-size: 16px;
+        }
+        /*咨询按钮样式*/
+        .consult-btn{
+            display: inline-block;
+            margin-top:24px;
+            padding:12px 36px;
+            background-color: var(--gold);
+            color:#fff;
+            text-decoration: none;
+            border-radius:2px;
+            transition:0.25s;
+        }
+        .consult-btn:hover{
+            opacity:0.85;
+        }
+        .text-center{
+            text-align:center;
+        }
+        footer {
+            background: #181818;
+            color: #aaa;
+            text-align: center;
+            padding: 35px 0;
+            margin-top: 60px;
+        }
+        @media (max-width:640px){
+            .nav-container{height:auto;padding:15px 20px;flex-direction:column;gap:15px;}
+            .nav-right-wrap{flex-wrap: wrap;justify-content:center;gap:16px;}
+            .main-nav{flex-wrap:wrap;justify-content:center;gap:16px;}
+            .main-nav a{font-size:14px;}
+            .wrap {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <!-- 导航LOGO修正 -->
+            <img src="social-icon/lxlogo.png" alt="临序空间设计 | Linxu Space Design">
+        </div>
+        <div class="nav-right-wrap">
+            <nav class="main-nav">
+                <!-- 已移除装修咨询导航 -->
+                <a href="index.html">首页</a>
+                <a href="service.html" class="active">业务服务</a>
+                <a href="about.html">关于我们</a>
+                <a href="index.html#contact">联系我们</a>
+            </nav>
+            <div class="theme-dropdown">
+                <button class="theme-trigger" id="triggerBtn"></button>
+                <div class="theme-menu" id="themeMenu">
+                    <button class="theme-option" data-mode="auto">🔄</button>
+                    <button class="theme-option" data-mode="light">☀️</button>
+                    <button class="theme-option" data-mode="dark">🌙</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="wrap">
+    <div class="section-title">
+        <h2>业务服务</h2>
+    </div>
+    <div class="service-content">
+        <p><strong>私宅全案整装</strong></p>
+        <p>平层住宅、复式跃层、别墅大宅原创室内设计，包含方案规划、效果图、施工图、选材跟进、施工落地、软装搭配一体化服务。</p>
+        <br>
+        <p><strong>商业空间工装</strong></p>
+        <p>办公室、商铺门店、餐饮空间、休闲会所设计，兼顾商业动线、品牌形象与实用功能。</p>
+        <br>
+        <p><strong>旧房翻新改造</strong></p>
+        <p>老房格局优化、水电改造、全屋翻新，解决户型缺陷，重塑居住体验。</p>
+    </div>
+
+
+    <!-- 板块顺序调整：装修指南 在前 -->
+    <div class="section-title">
+        <h2>装修指南</h2>
+    </div>
+    <div class="service-content">
+        <p>在这里分享家装、工装实用干货：户型优化思路、材料挑选、水电木瓦油施工要点、风格搭配、预算规划、常见装修避坑指南。</p>
+        <br>
+        <p>如有户型设计、造价预估、工艺疑问，欢迎联系我们获取一对一沟通。</p>
+    </div>
+
+    <!-- 装修咨询 在后 -->
+    <div class="section-title">
+        <h2>装修咨询</h2>
+    </div>
+    <div class="service-content text-center">
+        <p>临序空间设计一对一专属装修咨询服务</p>
+        <p>上门量房｜户型优化方案｜装修预算解析｜施工落地答疑</p>
+        <br>
+        <p>临境立序，打造理想人居空间</p>
+        <!-- 点击跳转至联系我们 -->
+        <a href="index.html#contact" class="consult-btn">立即咨询</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>临序空间设计 © 2026 版权所有</p>
+</footer>
+</div>
+
+<script>
+    const html = document.documentElement;
+    const triggerBtn = document.getElementById('triggerBtn');
+    const themeMenu = document.getElementById('themeMenu');
+    const options = document.querySelectorAll('.theme-option');
+    const storageKey = "site-theme";
+    const iconMap = {
+        auto:"🔄",
+        light:"☀️",
+        dark:"🌙"
+    };
+    let currentMode = localStorage.getItem(storageKey) || "auto";
+    applyMode(currentMode);
+    function applyMode(mode){
+        currentMode = mode;
+        html.setAttribute('data-theme', mode);
+        triggerBtn.textContent = iconMap[mode];
+        options.forEach(opt=>{
+            opt.classList.toggle('active', opt.dataset.mode === mode);
+        })
+        localStorage.setItem(storageKey, mode);
+    }
+    triggerBtn.addEventListener('click',(e)=>{
+        e.stopPropagation();
+        themeMenu.classList.toggle('open');
+    })
+    options.forEach(opt=>{
+        opt.addEventListener('click',()=>{
+            applyMode(opt.dataset.mode);
+            themeMenu.classList.remove('open');
+        })
+    })
+    document.addEventListener('click',()=>{
+        themeMenu.classList.remove('open');
+    })
+</script>
+</body>
+</html>

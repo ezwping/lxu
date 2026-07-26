@@ -1,0 +1,678 @@
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="临序空间设计，专注榆林神木私宅整装、别墅设计、商铺办公室工装、旧房翻新改造，全案空间设计落地服务。">
+<!-- favicon 修改为 social-icon/lxbqlogo.png -->
+<link rel="icon" href="social-icon/lxbqlogo.png" type="image/png">
+<link rel="apple-touch-icon" href="social-icon/lxbqlogo.png">
+<title>临序空间设计 - 私宅与商业空间全案设计 | Linxu Space Design</title>
+<style>
+:root{
+--gold:#c8a469;
+/* 浅色默认变量 */
+--bg-page:#ffffff;
+--bg-card:#f7f7f7;
+--text-main:#222222;
+--text-sub:#333333;
+--border-color:#dddddd;
+}
+[data-theme="dark"]{
+--bg-page:#151515;
+--bg-card:#1f1f1f;
+--text-main:#eeeeee;
+--text-sub:#cccccc;
+--border-color:#333333;
+}
+[data-theme="auto"]{
+color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+html[data-theme="auto"]{
+--bg-page:#151515;
+--bg-card:#1f1f1f;
+--text-main:#eeeeee;
+--text-sub:#cccccc;
+--border-color:#333333;
+}
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Microsoft YaHei", sans-serif;
+}
+html {
+scroll-behavior: smooth;
+background-color: var(--bg-page);
+color: var(--text-main);
+transition: background-color 0.35s ease, color 0.35s ease;
+}
+body {
+background-color: var(--bg-page);
+}
+/* 导航栏 */
+header {
+background-color: #181818;
+position: sticky;
+top: 0;
+z-index: 999;
+}
+.nav-container {
+max-width: 1240px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+height: 72px;
+gap: 20px;
+}
+/* LOGO 图片样式 */
+.logo img {
+height: 52px;
+width: auto;
+display: block;
+}
+.nav-right-wrap {
+display: flex;
+align-items: center;
+gap: 28px;
+}
+.main-nav {
+display: flex;
+align-items: center;
+gap: 32px;
+}
+.main-nav a {
+color: #cccccc;
+text-decoration: none;
+font-size: 15px;
+transition: 0.25s;
+}
+.main-nav a:hover {
+color: var(--gold);
+}
+
+/* ========== 主题下拉弹窗（纯图标无文字｜竖向排列）========== */
+.theme-dropdown{
+position: relative;
+}
+.theme-trigger{
+width:36px;
+height:36px;
+border-radius:50%;
+border:1px solid #666;
+background:transparent;
+color:#ccc;
+font-size:16px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.3s;
+}
+.theme-trigger:hover{
+border-color:var(--gold);
+color:var(--gold);
+}
+.theme-menu{
+position:absolute;
+top:46px;
+right:0;
+background:#222;
+border-radius:6px;
+padding:8px;
+display:none;
+flex-direction: column; /* 竖向排布 */
+gap:6px;
+z-index:9999;
+box-shadow:0 6px 14px rgba(0,0,0,0.35);
+}
+.theme-menu.open {
+display:flex;
+}
+.theme-option {
+width:34px;
+height:34px;
+border-radius:50%;
+border:1px solid #444;
+background:transparent;
+color:#ccc;
+font-size:16px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.25s;
+}
+.theme-option.active {
+border-color:var(--gold);
+color:var(--gold);
+}
+.theme-option:hover {
+border-color:var(--gold);
+color:var(--gold);
+}
+
+/* 梦幻建筑风格横幅 */
+.banner {
+height: 380px;
+background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),url("img/banner-bg.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #fff;
+position: relative;
+overflow: hidden;
+}
+.banner::after {
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background: radial-gradient(ellipse at 20% 80%, rgba(200,164,105,0.12) 0%, transparent 60%),
+radial-gradient(ellipse at 80% 20%, rgba(160,180,210,0.1) 0%, transparent 60%);
+pointer-events: none;
+}
+.banner h1 {
+font-size: 40px;
+margin-bottom: 12px;
+z-index:2;
+}
+.banner p {
+font-size: 18px;
+color: #dddddd;
+z-index:2;
+}
+
+/* ========= 横幅内社交图标【两行左对齐，不修改图标颜色】========= */
+.banner-social-wrap {
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:12px;
+position:absolute;
+right:40px;
+top:30px;
+z-index:3;
+}
+.banner-social-list {
+display:flex;
+align-items:center;
+gap:22px;
+justify-content:flex-start;
+}
+.banner-social-list a {
+width:44px;
+height:44px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.15);
+border-radius:50%;
+transition:0.3s;
+}
+.banner-social-list a:hover {
+background:var(--gold);
+}
+.banner-social-list img {
+width:26px;
+height:26px;
+object-fit:contain;
+}
+
+/* 容器通用 */
+.wrap {
+max-width: 1240px;
+margin: 70px auto;
+padding: 0 20px;
+}
+.section-title {
+text-align: center;
+margin-bottom: 45px;
+}
+.section-title h2 {
+display: inline-block;
+padding-bottom: 10px;
+border-bottom: 3px solid var(--gold);
+font-size: 26px;
+color: var(--text-main);
+}
+/* 效果图快捷链接 */
+.link-group {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+justify-content: center;
+}
+.link-group a {
+padding: 10px 22px;
+border: 1px solid var(--gold);
+color: var(--text-main);
+text-decoration: none;
+border-radius: 3px;
+transition: 0.3s;
+}
+.link-group a:hover {
+background-color: var(--gold);
+color: #fff;
+}
+/* 图片案例展示区 */
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 24px;
+}
+/* 服务流程四格布局 */
+.process-grid {
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 24px;
+}
+.gallery-item {
+overflow: hidden;
+border-radius: 6px;
+}
+.gallery-item img {
+width: 100%;
+height: 240px;
+object-fit: cover;
+transition: 0.4s;
+background: #e9e9e9;
+}
+/* ====== 修改区域：服务流程图片缩小居中 ====== */
+.process-item{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:16px;
+}
+.process-item img {
+width: 90%;
+height: auto;
+border-radius:6px;
+transition:0.4s;
+box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.process-item img:hover{
+transform: scale(1.03);
+}
+.gallery-item img:hover {
+transform: scale(1.05);
+}
+/* 联系我们 */
+.contact-wrap {
+display: flex;
+align-items: center;
+justify-content: center;
+gap:60px;
+flex-wrap: wrap;
+}
+.contact-text {
+line-height: 2.2;
+font-size: 17px;
+color: var(--text-sub);
+}
+.contact-text a {
+color:var(--gold);
+text-decoration:none;
+}
+.contact-text a:hover {
+text-decoration:underline;
+}
+.douyin-box {
+text-align:center;
+}
+.douyin-row {
+display:flex;
+gap:30px;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+}
+.douyin-box img {
+width:160px;
+height:auto;
+border-radius:8px;
+border:2px solid var(--gold);
+}
+.douyin-box p {
+margin-top:12px;
+color: var(--text-sub);
+}
+
+/* 底部 */
+footer {
+background: #181818;
+color: #aaa;
+text-align: center;
+padding: 35px 0;
+margin-top: 60px;
+}
+
+/* 移动端自适应【重点】 */
+@media (max-width:992px){
+.gallery-grid {grid-template-columns: repeat(2,1fr);}
+.process-grid {grid-template-columns: repeat(2,1fr);}
+.contact-wrap {gap:30px;}
+.banner-social-wrap {
+right:20px;
+}
+.banner-social-list {
+gap:20px;
+}
+.banner-social-list a {
+width:42px;
+height:42px;
+}
+.banner-social-list img {
+width:24px;
+height:24px;
+}
+.nav-right-wrap {gap:15px;}
+.main-nav {gap:20px;}
+}
+@media (max-width:640px){
+.nav-container {height:auto;padding:15px 20px;flex-direction:column;gap:15px;}
+.nav-right-wrap {flex-wrap: wrap;justify-content:center;gap:16px;}
+.main-nav {flex-wrap:wrap;justify-content:center;gap:16px;}
+.main-nav a {font-size:14px;}
+.banner h1 {font-size:28px;}
+
+.banner-social-wrap{
+position:static;
+margin-bottom:20px;
+align-items:flex-start;
+}
+.banner-social-list{
+gap:20px;
+flex-wrap:wrap;
+justify-content:flex-start;
+}
+.banner-social-list a{
+width:42px;
+height:42px;
+}
+.banner-social-list img{
+width:24px;
+height:24px;
+}
+
+.gallery-grid{
+grid-template-columns: 1fr;
+gap: 20px;
+}
+.process-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+.gallery-item img{
+height: auto;
+}
+.logo img{height:44px;}
+.douyin-box img{width:140px;}
+.wrap {
+padding: 0 12px;
+}
+.link-group a{
+padding:8px 14px;
+}
+}</style>
+
+</head>
+<body>
+<div class="page-wrap">
+<!-- 顶部导航 -->
+<header>
+<div class="nav-container">
+<div class="logo">
+<!-- 导航LOGO 修改为 social-icon/lxlogo.png -->
+<img src="social-icon/lxlogo.png" alt="临序空间设计 | Linxu Space Design">
+</div>
+<div class="nav-right-wrap">
+<nav class="main-nav">
+<a href="index.html#home">首页</a>
+<a href="service.html">业务服务</a>
+<a href="about.html">关于我们</a>
+<a href="#contact">联系我们</a>
+</nav>            
+            <div class="theme-dropdown">
+<button class="theme-trigger" id="triggerBtn"></button>
+<div class="theme-menu" id="themeMenu">
+<button class="theme-option" data-mode="auto">🔄</button>
+<button class="theme-option" data-mode="light">☀️</button>
+<button class="theme-option" data-mode="dark">🌙</button>
+</div>
+</div>
+</div>
+</div></header><section class="banner" id="home">
+<div class="banner-social-wrap">
+<div class="banner-social-list">
+<a href="#contact">
+<img src="social-icon/douyin-icon.png" alt="抖音">
+</a>
+<a href="#contact">
+<img src="social-icon/weibo.png" alt="微博">
+</a>
+<a href="#contact">
+<img src="social-icon/instagram.png" alt="instagram">
+</a>
+<a href="#contact">
+<img src="social-icon/telegram.png" alt="telegram">
+</a>
+<a href="#contact">
+<img src="social-icon/twitter.png" alt="twitter">
+</a>
+</div>
+<div class="banner-social-list">
+<a href="#contact">
+<img src="social-icon/phone.png" alt="电话">
+</a>
+<a href="#contact">
+<img src="social-icon/email.png" alt="邮箱">
+</a>
+<a href="#contact">
+<img src="social-icon/ditu.png" alt="地图">
+</a>
+<a href="#contact">
+<img src="social-icon/cloudflare.png" alt="cloudflare">
+</a>
+</div>
+</div>    <h1>临境立序 · 安居筑梦</h1>
+<p>设计落地、让结尾配得上开头</p></section><div class="wrap">
+<section>
+<div class="section-title">
+<h2>3DMAX效果图案例</h2>
+</div>
+<script src="./config/button.js"></script>
+<script>
+// HTML特殊字符转义，消除XSS风险
+function htmlEscape(str) {
+if (!str) return "";
+return String(str)
+.replace(/&/g, "&amp;")
+.replace(/</g, "&lt;")
+.replace(/>/g, "&gt;")
+.replace(/"/g, "&quot;")
+.replace(/'/g, "&#039;");
+}function renderButtons () {
+// 判断外部 JS 是否加载成功
+if (!window.BUTTON_CONFIG || !Array.isArray(window.BUTTON_CONFIG)) {
+const fallbackHtml = `
+
+                    <div class="link-group">
+<a href="#" target="_blank">现代极简案例</a>
+<a href="#" target="_blank">现代简约案例</a>
+<a href="#" target="_blank">意式轻奢案例</a>
+<a href="#" target="_blank">宋式美学案例</a>
+<a href="#" target="_blank">新 中 式 案 例</a>
+<a href="#" target="_blank">中古神秘案例</a>
+</div>
+<div class="link-group" style="margin-top:16px;">
+<a href="#" target="_blank">别墅大宅设计</a>
+<a href="#" target="_blank">复式跃层设计</a>
+<a href="#" target="_blank">平层整装案例</a>
+<a href="#" target="_blank">办公空间方案</a>
+<a href="#" target="_blank">餐饮门店设计</a>
+<a href="#" target="_blank">娱乐休闲案例</a>
+</div>`;
+document.querySelector(".section-title").insertAdjacentHTML("afterend", fallbackHtml);
+return;
+}
+const caseData = window.BUTTON_CONFIG;
+const titleDom = document.querySelector(".section-title");
+const rowOne = caseData.slice(0, 6);
+const rowTwo = caseData.slice(6);
+
+function buildRow(list) {
+let html = `<div class="link-group">`;
+list.forEach(item => {
+const name = htmlEscape(item.name);
+const link = htmlEscape(item.link);
+html += `<a href="${link}" target="_blank">${name}</a>`;
+});
+html += `</div>`;
+return html;
+}
+
+let renderHtml = buildRow(rowOne);
+renderHtml += `<div class="link-group" style="margin-top:16px;">`;
+rowTwo.forEach(item => {
+const name = htmlEscape(item.name);
+const link = htmlEscape(item.link);
+renderHtml += `<a href="${link}" target="_blank">${name}</a>`;
+});
+renderHtml += `</div>`;
+
+titleDom.insertAdjacentHTML("afterend", renderHtml);
+}
+
+// 轮询检测外部配置文件加载
+const timer = setInterval (() => {
+if (window.BUTTON_CONFIG) {
+clearInterval (timer);
+renderButtons ();
+}
+}, 60);
+// 超时兜底，最多等待 1.5 秒
+setTimeout (() => {
+clearInterval (timer);
+if (!window.BUTTON_CONFIG) renderButtons ();
+}, 1500);</script>
+
+    </section>
+    
+    <section style="margin-top:70px;">
+<div class="section-title">
+<h2>服务流程与施工标准</h2>
+</div>
+<div class="process-grid">
+<div class="process-item">
+<img src="img/process1.jpg" alt="全案设计服务流程" loading="lazy">
+</div>
+<div class="process-item">
+<img src="img/process2.jpg" alt="设计施工工艺标准流程" loading="lazy">
+</div>
+<div class="process-item">
+<img src="img/process3.jpg" alt="设计施工标准" loading="lazy">
+</div>
+<div class="process-item">
+<img src="img/process4.jpg" alt="水电木瓦油施工验收单" loading="lazy">
+</div>
+</div>
+</section>
+    <section style="margin-top:70px;">
+<div class="section-title">
+<h2>实景&效果图展示</h2>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="img/demo1.jpg" alt="室内设计效果图" loading="lazy">
+</div>
+<div class="gallery-item">
+<img src="img/demo2.jpg" alt="室内设计效果图" loading="lazy">
+</div>
+<div class="gallery-item">
+<img src="img/demo3.jpg" alt="室内设计效果图" loading="lazy">
+</div>
+</div>
+</section>
+    <section id="contact" style="margin-top:80px;">
+<div class="section-title">
+<h2>联系我们</h2>
+</div>
+<div class="contact-wrap">
+<div class="contact-text">
+<p>地址：<a href="https://amap.com/search/?query=榆林神木鸳鸯塔写字楼509" target="_blank">榆林神木鸳鸯塔写字楼509</a></p>
+<p>咨询电话：<a href="tel:19239359794">19239359794</a></p>
+<p>电子邮箱：001@lxuspace.com</p>
+<p>营业时间：365天×24h</p>
+</div>
+<div class="douyin-row">
+<div class="douyin-box">
+<img src="img/douyin.png" alt="临序空间设计抖音二维码">
+<p>扫码关注抖音｜查看更多实景案例</p>
+</div>
+<div class="douyin-box">
+<img src="img/map.png" alt="导航地图">
+<p>
+<a href="https://amap.com/search/?query=陕西省神木市滨河新区建材市场鸳鸯塔写字楼" target="_blank">点击导航到店</a>
+</p>
+</div>
+</div>
+</div>
+</section></div><footer>
+<p>临序空间设计 © 2026 版权所有</p>
+</footer>
+</div><script>
+const html = document.documentElement;
+const triggerBtn = document.getElementById('triggerBtn');
+const themeMenu = document.getElementById('themeMenu');
+const options = document.querySelectorAll('.theme-option');
+const storageKey = "site-theme";
+const iconMap = {
+auto:"🔄",
+light:"☀️",
+dark:"🌙"
+};
+
+// 读取缓存初始化
+let currentMode = localStorage.getItem(storageKey) || "auto";
+applyMode(currentMode);
+
+// 应用主题 + 更新UI
+function applyMode(mode){
+currentMode = mode;
+html.setAttribute('data-theme', mode);
+triggerBtn.textContent = iconMap[mode];
+options.forEach(opt=>{
+opt.classList.toggle('active', opt.dataset.mode === mode);
+})
+localStorage.setItem(storageKey, mode);
+}
+
+// 点击按钮展开/收起面板
+triggerBtn.addEventListener('click',(e)=>{
+e.stopPropagation();
+themeMenu.classList.toggle('open');
+})
+
+// 点击选项切换模式
+options.forEach(opt=>{
+opt.addEventListener('click',()=>{
+applyMode(opt.dataset.mode);
+themeMenu.classList.remove('open');
+})
+})
+
+// 点击页面空白关闭弹窗
+document.addEventListener('click',()=>{
+themeMenu.classList.remove('open');
+})
+</script></body>
+</html>
