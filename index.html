@@ -40,7 +40,7 @@ html[data-theme="auto"]{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: "Microsoft YaHei", sans-serif;
+font-family: "Microsoft YaHei", system-ui, -apple-system, sans-serif;
 }
 html {
 scroll-behavior: smooth;
@@ -207,6 +207,8 @@ align-items:center;
 gap:22px;
 justify-content:flex-start;
 }
+/* 同时支持a标签与span标签，现在图标统一使用span静态展示 */
+.banner-social-list span,
 .banner-social-list a {
 width:44px;
 height:44px;
@@ -217,6 +219,7 @@ background:rgba(255,255,255,0.15);
 border-radius:50%;
 transition:0.3s;
 }
+.banner-social-list span:hover,
 .banner-social-list a:hover {
 background:var(--gold);
 }
@@ -305,6 +308,10 @@ transform: scale(1.03);
 .gallery-item img:hover {
 transform: scale(1.05);
 }
+/* 锚点偏移修复，防止被导航遮挡 */
+#home, #contact {
+  scroll-margin-top: 80px;
+}
 /* 联系我们 */
 .contact-wrap {
 display: flex;
@@ -366,6 +373,7 @@ right:20px;
 .banner-social-list {
 gap:20px;
 }
+.banner-social-list span,
 .banner-social-list a {
 width:42px;
 height:42px;
@@ -394,6 +402,7 @@ gap:20px;
 flex-wrap:wrap;
 justify-content:flex-start;
 }
+.banner-social-list span,
 .banner-social-list a{
 width:42px;
 height:42px;
@@ -436,55 +445,59 @@ padding:8px 14px;
 </div>
 <div class="nav-right-wrap">
 <nav class="main-nav">
-<a href="index.html#home">首页</a>
+<a href="#home">首页</a>
 <a href="service.html">业务服务</a>
 <a href="about.html">关于我们</a>
 <a href="#contact">联系我们</a>
 </nav>            
-            <div class="theme-dropdown">
-<button class="theme-trigger" id="triggerBtn"></button>
+            <div class="theme-dropdown" id="themeDropdown">
+<button class="theme-trigger" id="triggerBtn" aria-label="切换网站显示模式"></button>
 <div class="theme-menu" id="themeMenu">
-<button class="theme-option" data-mode="auto">🔄</button>
-<button class="theme-option" data-mode="light">☀️</button>
-<button class="theme-option" data-mode="dark">🌙</button>
+<button class="theme-option" data-mode="auto" aria-label="跟随系统主题">🔄</button>
+<button class="theme-option" data-mode="light" aria-label="浅色模式">☀️</button>
+<button class="theme-option" data-mode="dark" aria-label="深色模式">🌙</button>
 </div>
 </div>
 </div>
-</div></header><section class="banner" id="home">
+</div></header>
+<section class="banner" id="home">
 <div class="banner-social-wrap">
 <div class="banner-social-list">
-<a href="#contact">
+<span>
 <img src="social-icon/douyin-icon.png" alt="抖音">
-</a>
-<a href="#contact">
+</span>
+<span>
 <img src="social-icon/weibo.png" alt="微博">
-</a>
-<a href="#contact">
+</span>
+<span>
 <img src="social-icon/instagram.png" alt="instagram">
-</a>
-<a href="#contact">
+</span>
+<span>
 <img src="social-icon/telegram.png" alt="telegram">
-</a>
-<a href="#contact">
+</span>
+<span>
 <img src="social-icon/twitter.png" alt="twitter">
-</a>
+</span>
 </div>
 <div class="banner-social-list">
-<a href="#contact">
+<span>
 <img src="social-icon/phone.png" alt="电话">
-</a>
-<a href="#contact">
+</span>
+<span>
 <img src="social-icon/email.png" alt="邮箱">
-</a>
-<a href="#contact">
+</span>
+<span>
 <img src="social-icon/ditu.png" alt="地图">
-</a>
-<a href="#contact">
+</span>
+<span>
 <img src="social-icon/cloudflare.png" alt="cloudflare">
-</a>
+</span>
 </div>
-</div>    <h1>临境立序 · 安居筑梦</h1>
-<p>设计落地、让结尾配得上开头</p></section><div class="wrap">
+</div>    
+<h1>临境立序 · 安居筑梦</h1>
+<p>设计落地、让结尾配得上开头</p>
+</section>
+<div class="wrap">
 <section>
 <div class="section-title">
 <h2>3DMAX效果图案例</h2>
@@ -500,26 +513,26 @@ return String(str)
 .replace(/>/g, "&gt;")
 .replace(/"/g, "&quot;")
 .replace(/'/g, "&#039;");
-}function renderButtons () {
+}
+function renderButtons () {
 // 判断外部 JS 是否加载成功
 if (!window.BUTTON_CONFIG || !Array.isArray(window.BUTTON_CONFIG)) {
 const fallbackHtml = `
-
-                    <div class="link-group">
-<a href="#" target="_blank">现代极简案例</a>
-<a href="#" target="_blank">现代简约案例</a>
-<a href="#" target="_blank">意式轻奢案例</a>
-<a href="#" target="_blank">宋式美学案例</a>
-<a href="#" target="_blank">新 中 式 案 例</a>
-<a href="#" target="_blank">中古神秘案例</a>
+<div class="link-group">
+<a href="#" target="_blank" rel="noopener noreferrer">现代极简案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">现代简约案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">意式轻奢案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">宋式美学案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">新 中 式 案 例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">中古神秘案例</a>
 </div>
 <div class="link-group" style="margin-top:16px;">
-<a href="#" target="_blank">别墅大宅设计</a>
-<a href="#" target="_blank">复式跃层设计</a>
-<a href="#" target="_blank">平层整装案例</a>
-<a href="#" target="_blank">办公空间方案</a>
-<a href="#" target="_blank">餐饮门店设计</a>
-<a href="#" target="_blank">娱乐休闲案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">别墅大宅设计</a>
+<a href="#" target="_blank" rel="noopener noreferrer">复式跃层设计</a>
+<a href="#" target="_blank" rel="noopener noreferrer">平层整装案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">办公空间方案</a>
+<a href="#" target="_blank" rel="noopener noreferrer">餐饮门店设计</a>
+<a href="#" target="_blank" rel="noopener noreferrer">娱乐休闲案例</a>
 </div>`;
 document.querySelector(".section-title").insertAdjacentHTML("afterend", fallbackHtml);
 return;
@@ -534,7 +547,7 @@ let html = `<div class="link-group">`;
 list.forEach(item => {
 const name = htmlEscape(item.name);
 const link = htmlEscape(item.link);
-html += `<a href="${link}" target="_blank">${name}</a>`;
+html += `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>`;
 });
 html += `</div>`;
 return html;
@@ -545,7 +558,7 @@ renderHtml += `<div class="link-group" style="margin-top:16px;">`;
 rowTwo.forEach(item => {
 const name = htmlEscape(item.name);
 const link = htmlEscape(item.link);
-renderHtml += `<a href="${link}" target="_blank">${name}</a>`;
+renderHtml += `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>`;
 });
 renderHtml += `</div>`;
 
@@ -563,7 +576,8 @@ renderButtons ();
 setTimeout (() => {
 clearInterval (timer);
 if (!window.BUTTON_CONFIG) renderButtons ();
-}, 1500);</script>
+}, 1500);
+</script>
 
     </section>
     
@@ -608,10 +622,10 @@ if (!window.BUTTON_CONFIG) renderButtons ();
 </div>
 <div class="contact-wrap">
 <div class="contact-text">
-<p>地址：<a href="https://amap.com/search/?query=榆林神木鸳鸯塔写字楼509" target="_blank">榆林神木鸳鸯塔写字楼509</a></p>
-<p>咨询电话：<a href="tel:19239359794">19239359794</a></p>
-<p>电子邮箱：001@lxuspace.com</p>
-<p>营业时间：365天×24h</p>
+<p>地址：陕西省神木市滨河新区建材市场鸳鸯塔写字楼</p>
+<p>电话：<a href="tel:19239359794">19239359794</a></p>
+<p>邮箱：001@lxuspace.com</p>
+<p>时间：365天×24h</p>
 </div>
 <div class="douyin-row">
 <div class="douyin-box">
@@ -621,18 +635,22 @@ if (!window.BUTTON_CONFIG) renderButtons ();
 <div class="douyin-box">
 <img src="img/map.png" alt="导航地图">
 <p>
-<a href="https://amap.com/search/?query=陕西省神木市滨河新区建材市场鸳鸯塔写字楼" target="_blank">点击导航到店</a>
+<a href="https://amap.com/search/?query=陕西省神木市滨河新区建材市场鸳鸯塔写字楼" target="_blank" rel="noopener noreferrer">导航到店</a>
 </p>
 </div>
 </div>
 </div>
-</section></div><footer>
+</section>
+</div>
+<footer>
 <p>临序空间设计 © 2026 版权所有</p>
 </footer>
-</div><script>
+</div>
+<script>
 const html = document.documentElement;
 const triggerBtn = document.getElementById('triggerBtn');
 const themeMenu = document.getElementById('themeMenu');
+const themeDropdown = document.getElementById('themeDropdown');
 const options = document.querySelectorAll('.theme-option');
 const storageKey = "site-theme";
 const iconMap = {
@@ -670,9 +688,12 @@ themeMenu.classList.remove('open');
 })
 })
 
-// 点击页面空白关闭弹窗
-document.addEventListener('click',()=>{
-themeMenu.classList.remove('open');
+// 点击页面空白关闭弹窗（修复冒泡BUG）
+document.addEventListener('click',(e)=>{
+if(!themeDropdown.contains(e.target)){
+    themeMenu.classList.remove('open');
+}
 })
-</script></body>
+</script>
+</body>
 </html>
