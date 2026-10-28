@@ -17,7 +17,7 @@ window.BUTTON_CONFIG = [
 window.BUTTON_CONFIG_2 = [
   { name: "商业案例", link: "https://vr.douhuiai.com/v/06fr313ah0a_m2-1789375711.html" },
   { name: "商业案例", link: "https://vr.douhuiai.com/v/2aa59t47kk92nf-1789375668.html" },
-  { name: "#", link: "https://vr.douhuiai.com/v/774pz372f6a0l9-1789375678.html" },
+  { name: "商业案例", link: "https://vr.douhuiai.com/v/774pz372f6a0l9-1789375678.html" },
   { name: "#", link: "#" },
   { name: "#", link: "#" },
   { name: "#", link: "#" },
