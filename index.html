@@ -6,7 +6,7 @@
 <meta name="description" content="临序空间设计，专注榆林神木私宅整装、别墅设计、商铺办公室工装、旧房翻新改造，全案空间设计落地服务。">
 <link rel="icon" href="social-icon/lxbqlogo.png" type="image/png">
 <link rel="apple-touch-icon" href="social-icon/lxbqlogo.png">
-<title>临序空间设计 - 私宅与商业空间全案设计 | Linxu Space Design</title>
+<title>临序空间设计 - 私宅与商业空间全案设计</title>
 <style>
 :root{
 --gold:#c8a469;
@@ -223,34 +223,53 @@ max-width: 1240px;
 margin: 70px auto;
 padding: 0 20px;
 }
-.section-title {
-text-align: center;
-margin-bottom: 45px;
+.case-block{
+background:#181818;
+padding:60px 20px;
+margin:40px 0;
+text-align:center;
 }
-.section-title h2 {
-display: inline-block;
-padding-bottom: 10px;
-border-bottom: 3px solid var(--gold);
-font-size: 26px;
-color: var(--text-main);
+.case-block h2{
+color:#fff;
+font-size:32px;
+position:relative;
+display:inline-block;
+padding-bottom:16px;
+margin-bottom:40px;
 }
-.link-group {
-display: flex;
-flex-wrap: wrap;
-gap: 16px;
-justify-content: center;
+.case-block h2::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:2px;
+background-color:var(--gold);
 }
-.link-group a {
-padding: 10px 22px;
-border: 1px solid var(--gold);
-color: var(--text-main);
-text-decoration: none;
-border-radius: 3px;
-transition: 0.3s;
+.case-btn-wrap{
+width:100%;
 }
-.link-group a:hover {
-background-color: var(--gold);
-color: #fff;
+.case-btn-group{
+display:flex;
+flex-wrap:wrap;
+gap:24px;
+justify-content:center;
+margin-bottom:24px;
+}
+.case-btn-group:last-child{
+margin-bottom:0;
+}
+.case-btn-group a{
+color:#fff;
+text-decoration:none;
+border:1px solid var(--gold);
+padding:14px 30px;
+border-radius:2px;
+transition:0.3s;
+}
+.case-btn-group a:hover{
+background-color:var(--gold);
+color:#111;
 }
 .gallery-grid {
 display: grid;
@@ -404,8 +423,15 @@ height: auto;
 .wrap {
 padding: 0 12px;
 }
-.link-group a{
-padding:8px 14px;
+.case-btn-group{
+gap:14px;
+}
+.case-btn-group a{
+padding:10px 18px;
+font-size:14px;
+}
+.case-block h2{
+font-size:24px;
 }
 }
 </style>
@@ -424,12 +450,12 @@ padding:8px 14px;
 <a href="about.html">关于我们</a>
 <a href="#contact">联系我们</a>
 </nav>
-<div class="theme-dropdown" id="themeDropdown">
-<button class="theme-trigger" id="triggerBtn" aria-label="切换网站显示模式"></button>
+<div class="theme-dropdown" id="themeWrap">
+<button class="theme-trigger" id="themeBtn" aria-label="切换主题">🌓</button>
 <div class="theme-menu" id="themeMenu">
-<button class="theme-option" data-mode="auto" aria-label="跟随系统主题">🔄</button>
-<button class="theme-option" data-mode="light" aria-label="浅色模式">☀️</button>
-<button class="theme-option" data-mode="dark" aria-label="深色模式">🌙</button>
+<button class="theme-option" data-value="light" aria-label="浅色模式">☀️</button>
+<button class="theme-option" data-value="dark" aria-label="深色模式">🌙</button>
+<button class="theme-option" data-value="auto" aria-label="跟随系统">🔄</button>
 </div>
 </div>
 </div>
@@ -439,116 +465,54 @@ padding:8px 14px;
 <section class="banner" id="home">
 <div class="banner-social-wrap">
 <div class="banner-social-list">
-<span>
-<img src="social-icon/douyin-icon.png" alt="抖音">
-</span>
-<span>
+<a href="https://douyin.com" target="_blank" rel="noopener noreferrer">
+<img src="social-icon/douyin.png" alt="抖音">
+</a>
+<a href="https://weibo.com" target="_blank" rel="noopener noreferrer">
 <img src="social-icon/weibo.png" alt="微博">
-</span>
-<span>
-<img src="social-icon/instagram.png" alt="instagram">
-</span>
-<span>
-<img src="social-icon/telegram.png" alt="telegram">
-</span>
-<span>
-<img src="social-icon/twitter.png" alt="twitter">
-</span>
+</a>
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+<img src="social-icon/ins.png" alt="Instagram">
+</a>
+<a href="https://t.me/" target="_blank" rel="noopener noreferrer">
+<img src="social-icon/telegram.png" alt="Telegram">
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+<img src="social-icon/twitter.png" alt="Twitter">
+</a>
 </div>
 <div class="banner-social-list">
-<span>
+<a href="tel:19239359794">
 <img src="social-icon/phone.png" alt="电话">
-</span>
-<span>
+</a>
+<a href="mailto:001@lxuspace.com">
 <img src="social-icon/email.png" alt="邮箱">
-</span>
-<span>
-<img src="social-icon/ditu.png" alt="地图">
-</span>
-<span>
-<img src="social-icon/cloudflare.png" alt="cloudflare">
-</span>
+</a>
+<a href="https://amap.com/search/?query=陕西省神木市鸳鸯塔写字楼509" target="_blank" rel="noopener noreferrer">
+<img src="social-icon/map.png" alt="地图">
+</a>
+<a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">
+<img src="social-icon/cloud.png" alt="Cloudflare">
+</a>
 </div>
 </div>
 <h1>临境立序 · 安居筑梦</h1>
-<p>设计落地、让结尾配得上开头</p>
+<p>设计落地、实景呈现</p>
+</section>
+
+<!-- 3DMAX效果图案例板块 -->
+<section class="case-block">
+  <h2>3DMAX效果图案例</h2>
+  <div id="box1" class="case-btn-wrap"></div>
+</section>
+
+<!-- 施工图&节点案例板块 -->
+<section class="case-block">
+  <h2>施工图&节点案例</h2>
+  <div id="box2" class="case-btn-wrap"></div>
 </section>
 
 <div class="wrap">
-<section>
-<div class="section-title">
-<h2>3DMAX效果图案例</h2>
-</div>
-<script src="./config/button.js"></script>
-<script>
-function htmlEscape(str) {
-if (!str) return "";
-return String(str)
-.replace(/&/g, "&amp;")
-.replace(/</g, "&lt;")
-.replace(/>/g, "&gt;")
-.replace(/"/g, "&quot;")
-.replace(/'/g, "&#039;");
-}
-function renderButtons () {
-if (!window.BUTTON_CONFIG || !Array.isArray(window.BUTTON_CONFIG)) {
-const fallbackHtml = `
-<div class="link-group">
-<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
-</div>
-<div class="link-group" style="margin-top:16px;">
-<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
-</div>`;
-document.querySelector(".section-title").insertAdjacentHTML("afterend", fallbackHtml);
-return;
-}
-const caseData = window.BUTTON_CONFIG;
-const titleDom = document.querySelector(".section-title");
-const rowOne = caseData.slice(0, 6);
-const rowTwo = caseData.slice(6);
-function buildRow(list) {
-let html = `<div class="link-group">`;
-list.forEach(item => {
-const name = htmlEscape(item.name);
-const link = htmlEscape(item.link);
-html += `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>`;
-});
-html += `</div>`;
-return html;
-}
-let renderHtml = buildRow(rowOne);
-renderHtml += `<div class="link-group" style="margin-top:16px;">`;
-rowTwo.forEach(item => {
-const name = htmlEscape(item.name);
-const link = htmlEscape(item.link);
-renderHtml += `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>`;
-});
-renderHtml += `</div>`;
-titleDom.insertAdjacentHTML("afterend", renderHtml);
-}
-const timer = setInterval (() => {
-if (window.BUTTON_CONFIG) {
-clearInterval (timer);
-renderButtons ();
-}
-}, 60);
-setTimeout (() => {
-clearInterval (timer);
-if (!window.BUTTON_CONFIG) renderButtons ();
-}, 1500);
-</script>
-</section>
-
 <section style="margin-top:70px;">
 <div class="section-title">
 <h2>服务流程与施工标准</h2>
@@ -558,13 +522,13 @@ if (!window.BUTTON_CONFIG) renderButtons ();
 <img src="img/process1.jpg" alt="全案设计服务流程" loading="lazy">
 </div>
 <div class="process-item">
-<img src="img/process2.jpg" alt="设计施工工艺标准流程" loading="lazy">
+<img src="img/process2.jpg" alt="施工工艺标准流程" loading="lazy">
 </div>
 <div class="process-item">
-<img src="img/process3.jpg" alt="设计施工标准" loading="lazy">
+<img src="img/process3.jpg" alt="设计施工规范标准" loading="lazy">
 </div>
 <div class="process-item">
-<img src="img/process4.jpg" alt="水电木瓦油施工验收单" loading="lazy">
+<img src="img/process4.jpg" alt="水电木瓦油验收规范" loading="lazy">
 </div>
 </div>
 </section>
@@ -575,21 +539,19 @@ if (!window.BUTTON_CONFIG) renderButtons ();
 </div>
 <div class="contact-wrap">
 <div class="contact-text">
-<p>地址：陕西省神木市滨河新区建材市场鸳鸯塔写字楼</p>
+<p>地址：陕西省榆林市神木市鸳鸯塔写字楼509</p>
 <p>电话：<a href="tel:19239359794">19239359794</a></p>
-<p>邮箱：001@lxuspace.com</p>
-<p>时间：365天×24h</p>
+<p>邮箱：<a href="mailto:001@lxuspace.com">001@lxuspace.com</a></p>
+<p>服务时间：全年无休 · 一对一设计对接</p>
 </div>
 <div class="douyin-row">
 <div class="douyin-box">
-<img src="img/douyin.png" alt="临序空间设计抖音二维码">
-<p>扫码关注抖音｜查看更多实景案例</p>
+<img src="img/douyin-qrcode.png" alt="抖音二维码">
+<p>扫码关注抖音｜查看实景案例</p>
 </div>
 <div class="douyin-box">
-<img src="img/map.png" alt="导航地图">
-<p>
-<a href="https://amap.com/search/?query=陕西省神木市滨河新区建材市场鸳鸯塔写字楼" target="_blank" rel="noopener noreferrer">导航到店</a>
-</p>
+<img src="img/map-qrcode.png" alt="导航二维码">
+<p>导航直达工作室</p>
 </div>
 </div>
 </div>
@@ -601,43 +563,55 @@ if (!window.BUTTON_CONFIG) renderButtons ();
 </footer>
 </div>
 
+<!-- 加载按钮配置文件 -->
+<script src="config/button.js"></script>
 <script>
-const html = document.documentElement;
-const triggerBtn = document.getElementById('triggerBtn');
+// 渲染按钮函数
+function renderBtn(containerId, arr) {
+  const wrap = document.getElementById(containerId);
+  let html = '';
+  const row1 = arr.slice(0,6);
+  const row2 = arr.slice(6,12);
+  html += '<div class="case-btn-group">';
+  row1.forEach(item=>{
+    html += `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.name}</a>`
+  })
+  html += '</div>';
+  html += '<div class="case-btn-group">';
+  row2.forEach(item=>{
+    html += `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.name}</a>`
+  })
+  html += '</div>';
+  wrap.innerHTML = html;
+}
+renderBtn('box1', window.BUTTON_CONFIG);
+renderBtn('box2', window.BUTTON_CONFIG_2);
+
+// 主题切换脚本
+const themeWrap = document.getElementById('themeWrap');
+const themeBtn = document.getElementById('themeBtn');
 const themeMenu = document.getElementById('themeMenu');
-const themeDropdown = document.getElementById('themeDropdown');
-const options = document.querySelectorAll('.theme-option');
-const storageKey = "site-theme";
-const iconMap = {
-auto:"🔄",
-light:"☀️",
-dark:"🌙"
-};
-let currentMode = localStorage.getItem(storageKey) || "auto";
-applyMode(currentMode);
-function applyMode(mode){
-currentMode = mode;
-html.setAttribute('data-theme', mode);
-triggerBtn.textContent = iconMap[mode];
-options.forEach(opt=>{
-opt.classList.toggle('active', opt.dataset.mode === mode);
+const htmlDom = document.documentElement;
+const themeList = themeMenu.querySelectorAll('.theme-option');
+let localTheme = localStorage.getItem('site-theme') || 'auto';
+htmlDom.setAttribute('data-theme', localTheme);
+themeList.forEach(btn=>{
+  if(btn.dataset.value === localTheme) btn.classList.add('active');
+  btn.onclick = ()=>{
+    const val = btn.dataset.value;
+    htmlDom.setAttribute('data-theme', val);
+    localStorage.setItem('site-theme', val);
+    themeList.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    themeMenu.classList.remove('open');
+  }
 })
-localStorage.setItem(storageKey, mode);
+themeBtn.onclick = (e)=>{
+  e.stopPropagation();
+  themeMenu.classList.toggle('open');
 }
-triggerBtn.addEventListener('click',(e)=>{
-e.stopPropagation();
-themeMenu.classList.toggle('open');
-})
-options.forEach(opt=>{
-opt.addEventListener('click',()=>{
-applyMode(opt.dataset.mode);
-themeMenu.classList.remove('open');
-})
-})
-document.addEventListener('click',(e)=>{
-if(!themeDropdown.contains(e.target)){
-themeMenu.classList.remove('open');
-}
+document.addEventListener('click', ()=>{
+  themeMenu.classList.remove('open');
 })
 </script>
 </body>
