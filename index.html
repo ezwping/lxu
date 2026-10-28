@@ -1,16 +1,15 @@
+<!DOCTYPE html>
 <html lang="zh-CN" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="临序空间设计，专注榆林神木私宅整装、别墅设计、商铺办公室工装、旧房翻新改造，全案空间设计落地服务。">
-<!-- favicon 修改为 social-icon/lxbqlogo.png -->
 <link rel="icon" href="social-icon/lxbqlogo.png" type="image/png">
 <link rel="apple-touch-icon" href="social-icon/lxbqlogo.png">
 <title>临序空间设计 - 私宅与商业空间全案设计 | Linxu Space Design</title>
 <style>
 :root{
 --gold:#c8a469;
-/* 浅色默认变量 */
 --bg-page:#ffffff;
 --bg-card:#f7f7f7;
 --text-main:#222222;
@@ -51,7 +50,6 @@ transition: background-color 0.35s ease, color 0.35s ease;
 body {
 background-color: var(--bg-page);
 }
-/* 导航栏 */
 header {
 background-color: #181818;
 position: sticky;
@@ -68,7 +66,6 @@ padding: 0 20px;
 height: 72px;
 gap: 20px;
 }
-/* LOGO 图片样式 */
 .logo img {
 height: 52px;
 width: auto;
@@ -93,8 +90,6 @@ transition: 0.25s;
 .main-nav a:hover {
 color: var(--gold);
 }
-
-/* ========== 主题下拉弹窗（纯图标无文字｜竖向排列）========== */
 .theme-dropdown{
 position: relative;
 }
@@ -124,7 +119,7 @@ background:#222;
 border-radius:6px;
 padding:8px;
 display:none;
-flex-direction: column; /* 竖向排布 */
+flex-direction: column;
 gap:6px;
 z-index:9999;
 box-shadow:0 6px 14px rgba(0,0,0,0.35);
@@ -154,8 +149,6 @@ color:var(--gold);
 border-color:var(--gold);
 color:var(--gold);
 }
-
-/* 梦幻建筑风格横幅 */
 .banner {
 height: 380px;
 background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),url("img/banner-bg.png");
@@ -189,8 +182,6 @@ font-size: 18px;
 color: #dddddd;
 z-index:2;
 }
-
-/* ========= 横幅内社交图标【两行左对齐，不修改图标颜色】========= */
 .banner-social-wrap {
 display:flex;
 flex-direction:column;
@@ -207,7 +198,6 @@ align-items:center;
 gap:22px;
 justify-content:flex-start;
 }
-/* 同时支持a标签与span标签，现在图标统一使用span静态展示 */
 .banner-social-list span,
 .banner-social-list a {
 width:44px;
@@ -228,8 +218,6 @@ width:26px;
 height:26px;
 object-fit:contain;
 }
-
-/* 容器通用 */
 .wrap {
 max-width: 1240px;
 margin: 70px auto;
@@ -246,7 +234,6 @@ border-bottom: 3px solid var(--gold);
 font-size: 26px;
 color: var(--text-main);
 }
-/* 效果图快捷链接 */
 .link-group {
 display: flex;
 flex-wrap: wrap;
@@ -265,13 +252,11 @@ transition: 0.3s;
 background-color: var(--gold);
 color: #fff;
 }
-/* 图片案例展示区 */
 .gallery-grid {
 display: grid;
 grid-template-columns: repeat(3,1fr);
 gap: 24px;
 }
-/* 服务流程四格布局 */
 .process-grid {
 display: grid;
 grid-template-columns: repeat(4,1fr);
@@ -288,7 +273,6 @@ object-fit: cover;
 transition: 0.4s;
 background: #e9e9e9;
 }
-/* ====== 修改区域：服务流程图片缩小居中 ====== */
 .process-item{
 display:flex;
 justify-content:center;
@@ -308,11 +292,9 @@ transform: scale(1.03);
 .gallery-item img:hover {
 transform: scale(1.05);
 }
-/* 锚点偏移修复，防止被导航遮挡 */
 #home, #contact {
-  scroll-margin-top: 80px;
+scroll-margin-top: 80px;
 }
-/* 联系我们 */
 .contact-wrap {
 display: flex;
 align-items: center;
@@ -352,8 +334,6 @@ border:2px solid var(--gold);
 margin-top:12px;
 color: var(--text-sub);
 }
-
-/* 底部 */
 footer {
 background: #181818;
 color: #aaa;
@@ -361,8 +341,6 @@ text-align: center;
 padding: 35px 0;
 margin-top: 60px;
 }
-
-/* 移动端自适应【重点】 */
 @media (max-width:992px){
 .gallery-grid {grid-template-columns: repeat(2,1fr);}
 .process-grid {grid-template-columns: repeat(2,1fr);}
@@ -391,7 +369,6 @@ height:24px;
 .main-nav {flex-wrap:wrap;justify-content:center;gap:16px;}
 .main-nav a {font-size:14px;}
 .banner h1 {font-size:28px;}
-
 .banner-social-wrap{
 position:static;
 margin-bottom:20px;
@@ -411,7 +388,6 @@ height:42px;
 width:24px;
 height:24px;
 }
-
 .gallery-grid{
 grid-template-columns: 1fr;
 gap: 20px;
@@ -431,16 +407,14 @@ padding: 0 12px;
 .link-group a{
 padding:8px 14px;
 }
-}</style>
-
+}
+</style>
 </head>
 <body>
 <div class="page-wrap">
-<!-- 顶部导航 -->
 <header>
 <div class="nav-container">
 <div class="logo">
-<!-- 导航LOGO 修改为 social-icon/lxlogo.png -->
 <img src="social-icon/lxlogo.png" alt="临序空间设计 | Linxu Space Design">
 </div>
 <div class="nav-right-wrap">
@@ -449,8 +423,8 @@ padding:8px 14px;
 <a href="service.html">业务服务</a>
 <a href="about.html">关于我们</a>
 <a href="#contact">联系我们</a>
-</nav>            
-            <div class="theme-dropdown" id="themeDropdown">
+</nav>
+<div class="theme-dropdown" id="themeDropdown">
 <button class="theme-trigger" id="triggerBtn" aria-label="切换网站显示模式"></button>
 <div class="theme-menu" id="themeMenu">
 <button class="theme-option" data-mode="auto" aria-label="跟随系统主题">🔄</button>
@@ -459,7 +433,9 @@ padding:8px 14px;
 </div>
 </div>
 </div>
-</div></header>
+</div>
+</header>
+
 <section class="banner" id="home">
 <div class="banner-social-wrap">
 <div class="banner-social-list">
@@ -493,10 +469,11 @@ padding:8px 14px;
 <img src="social-icon/cloudflare.png" alt="cloudflare">
 </span>
 </div>
-</div>    
+</div>
 <h1>临境立序 · 安居筑梦</h1>
 <p>设计落地、让结尾配得上开头</p>
 </section>
+
 <div class="wrap">
 <section>
 <div class="section-title">
@@ -504,7 +481,6 @@ padding:8px 14px;
 </div>
 <script src="./config/button.js"></script>
 <script>
-// HTML特殊字符转义，消除XSS风险
 function htmlEscape(str) {
 if (!str) return "";
 return String(str)
@@ -515,24 +491,23 @@ return String(str)
 .replace(/'/g, "&#039;");
 }
 function renderButtons () {
-// 判断外部 JS 是否加载成功
 if (!window.BUTTON_CONFIG || !Array.isArray(window.BUTTON_CONFIG)) {
 const fallbackHtml = `
 <div class="link-group">
-<a href="#" target="_blank" rel="noopener noreferrer">现代极简案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">现代简约案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">意式轻奢案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">宋式美学案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">新 中 式 案 例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">中古神秘案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">设计案例</a>
 </div>
 <div class="link-group" style="margin-top:16px;">
-<a href="#" target="_blank" rel="noopener noreferrer">别墅大宅设计</a>
-<a href="#" target="_blank" rel="noopener noreferrer">复式跃层设计</a>
-<a href="#" target="_blank" rel="noopener noreferrer">平层整装案例</a>
-<a href="#" target="_blank" rel="noopener noreferrer">办公空间方案</a>
-<a href="#" target="_blank" rel="noopener noreferrer">餐饮门店设计</a>
-<a href="#" target="_blank" rel="noopener noreferrer">娱乐休闲案例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
+<a href="#" target="_blank" rel="noopener noreferrer">施工图例</a>
 </div>`;
 document.querySelector(".section-title").insertAdjacentHTML("afterend", fallbackHtml);
 return;
@@ -541,7 +516,6 @@ const caseData = window.BUTTON_CONFIG;
 const titleDom = document.querySelector(".section-title");
 const rowOne = caseData.slice(0, 6);
 const rowTwo = caseData.slice(6);
-
 function buildRow(list) {
 let html = `<div class="link-group">`;
 list.forEach(item => {
@@ -552,7 +526,6 @@ html += `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>
 html += `</div>`;
 return html;
 }
-
 let renderHtml = buildRow(rowOne);
 renderHtml += `<div class="link-group" style="margin-top:16px;">`;
 rowTwo.forEach(item => {
@@ -561,27 +534,22 @@ const link = htmlEscape(item.link);
 renderHtml += `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>`;
 });
 renderHtml += `</div>`;
-
 titleDom.insertAdjacentHTML("afterend", renderHtml);
 }
-
-// 轮询检测外部配置文件加载
 const timer = setInterval (() => {
 if (window.BUTTON_CONFIG) {
 clearInterval (timer);
 renderButtons ();
 }
 }, 60);
-// 超时兜底，最多等待 1.5 秒
 setTimeout (() => {
 clearInterval (timer);
 if (!window.BUTTON_CONFIG) renderButtons ();
 }, 1500);
 </script>
+</section>
 
-    </section>
-    
-    <section style="margin-top:70px;">
+<section style="margin-top:70px;">
 <div class="section-title">
 <h2>服务流程与施工标准</h2>
 </div>
@@ -600,23 +568,8 @@ if (!window.BUTTON_CONFIG) renderButtons ();
 </div>
 </div>
 </section>
-    <section style="margin-top:70px;">
-<div class="section-title">
-<h2>实景&效果图展示</h2>
-</div>
-<div class="gallery-grid">
-<div class="gallery-item">
-<img src="img/demo1.jpg" alt="室内设计效果图" loading="lazy">
-</div>
-<div class="gallery-item">
-<img src="img/demo2.jpg" alt="室内设计效果图" loading="lazy">
-</div>
-<div class="gallery-item">
-<img src="img/demo3.jpg" alt="室内设计效果图" loading="lazy">
-</div>
-</div>
-</section>
-    <section id="contact" style="margin-top:80px;">
+
+<section id="contact" style="margin-top:80px;">
 <div class="section-title">
 <h2>联系我们</h2>
 </div>
@@ -642,10 +595,12 @@ if (!window.BUTTON_CONFIG) renderButtons ();
 </div>
 </section>
 </div>
+
 <footer>
 <p>临序空间设计 © 2026 版权所有</p>
 </footer>
 </div>
+
 <script>
 const html = document.documentElement;
 const triggerBtn = document.getElementById('triggerBtn');
@@ -658,12 +613,8 @@ auto:"🔄",
 light:"☀️",
 dark:"🌙"
 };
-
-// 读取缓存初始化
 let currentMode = localStorage.getItem(storageKey) || "auto";
 applyMode(currentMode);
-
-// 应用主题 + 更新UI
 function applyMode(mode){
 currentMode = mode;
 html.setAttribute('data-theme', mode);
@@ -673,25 +624,19 @@ opt.classList.toggle('active', opt.dataset.mode === mode);
 })
 localStorage.setItem(storageKey, mode);
 }
-
-// 点击按钮展开/收起面板
 triggerBtn.addEventListener('click',(e)=>{
 e.stopPropagation();
 themeMenu.classList.toggle('open');
 })
-
-// 点击选项切换模式
 options.forEach(opt=>{
 opt.addEventListener('click',()=>{
 applyMode(opt.dataset.mode);
 themeMenu.classList.remove('open');
 })
 })
-
-// 点击页面空白关闭弹窗（修复冒泡BUG）
 document.addEventListener('click',(e)=>{
 if(!themeDropdown.contains(e.target)){
-    themeMenu.classList.remove('open');
+themeMenu.classList.remove('open');
 }
 })
 </script>
