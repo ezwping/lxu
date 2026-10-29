@@ -8,7 +8,7 @@ window.BUTTON_CONFIG = [
 
   { name: "意式案例", link: "https://vr.douhuiai.com/v/0ef6j5a06bieda-1793177399.html" },
   { name: "现代别墅", link: "https://vr.douhuiai.com/v/djaav9efbw1x7e-1792827112.html" },
-  { name: "中式别墅", link: "https://vr.douhuiai.com/v/6cl875af3waa6d-1789120986.html" },
+  { name: "中式别墅", link: "https://vr.douhuiai.com/v/p91d8y3i45c6v8-1789121085.html" },
   { name: "宋氏跃层", link: "https://vr.douhuiai.com/v/59mf6wd5lean4f-1793098593.html" },
   { name: "施工图例", link: "https://vr.douhuiai.com/user/edit/index/id/868872" },
   { name: "施工图例", link: "https://vr.douhuiai.com/user/edit/index/id/868872" },
